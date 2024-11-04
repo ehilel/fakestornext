@@ -25,6 +25,5 @@ let BOOKS = [
 ];
 
 export async function GET() {
-  console.log('hiii');
   return NextResponse.json(BOOKS)
 }

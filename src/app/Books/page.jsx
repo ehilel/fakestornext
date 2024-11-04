@@ -1,13 +1,13 @@
 "use client";
 import styles from './Books.module.css';
-import { GET } from '../../services/store';
+import { getBooks } from '../../services/service/book';
 import { useEffect, useState } from 'react';
 
 const Books = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        getJewelery().then((res) => { setProducts(res); });
+        getBooks().then((res) => { setProducts(res); });
 
     }, []);
 
