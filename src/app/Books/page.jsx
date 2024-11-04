@@ -7,8 +7,13 @@ const Books = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        getBooks().then((res) => { setProducts(res); });
-
+        getBooks()
+            .then((res) => {
+                setProducts(res.data);
+            })
+            .catch((error) => {
+                console.error('Error fetching books:', error); 
+            });
     }, []);
 
     return (
